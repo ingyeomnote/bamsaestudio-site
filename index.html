@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bamsae Studio</title>
+<meta name="description" content="Bamsae Studio is a one-person, AI-native product studio in Korea building consumer apps and games with Claude.">
+<style>
+  :root{
+    --bg:#0e1116; --panel:#151a22; --line:#232a35; --text:#e7e3da; --muted:#9aa1ab; --accent:#f2c46d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font:16px/1.65 "Pretendard","Apple SD Gothic Neo","Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  header{padding:28px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+  .logo{font-weight:700;letter-spacing:.02em}
+  .logo span{color:var(--accent)}
+  header nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:14px}
+  header nav a:hover{color:var(--text)}
+  .hero{padding:88px 0 72px}
+  .eyebrow{color:var(--accent);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
+  h1{font-size:44px;line-height:1.15;font-weight:700;letter-spacing:-.01em;max-width:680px}
+  .lead{margin-top:22px;color:var(--muted);font-size:18px;max-width:620px}
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  h2{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:28px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px}
+  .card h3{font-size:18px;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:15px}
+  .tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--accent);border:1px solid #3a3322;border-radius:999px;padding:2px 10px}
+  ol.steps{list-style:none;counter-reset:s;display:grid;gap:14px}
+  ol.steps li{counter-increment:s;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}
+  ol.steps li::before{content:counter(s);width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:13px;color:var(--accent)}
+  ol.steps b{display:block}
+  ol.steps span{color:var(--muted);font-size:15px}
+  .note{margin-top:22px;color:var(--muted);font-size:15px}
+  footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  @media (max-width:680px){h1{font-size:32px}.grid{grid-template-columns:1fr}.hero{padding:64px 0 48px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Bamsae <span>Studio</span></div>
+    <nav><a href="#products">Products</a><a href="#how">How we build</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <div class="hero">
+    <div class="eyebrow">밤새 스튜디오 · Korea</div>
+    <h1>A one-person, AI-native studio building apps and games overnight.</h1>
+    <p class="lead">Bamsae (밤새) means "all night" in Korean. After the day job, we build small consumer products by vibe coding with Claude, and ship them one careful step at a time.</p>
+  </div>
+
+  <section id="products">
+    <h2>What we're building</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Diary &amp; Couple Journal</h3>
+        <p>A personal bookshelf journal with decorating tools, photo-to-sticker creation and a look-alike character you can customize.</p>
+        <span class="tag">In development</span>
+      </div>
+      <div class="card">
+        <h3>Raccoon Action Roguelite</h3>
+        <p>A Unity action roguelite starring a straw-hat raccoon, with sword, bow and axe across three battlefields.</p>
+        <span class="tag">In development</span>
+      </div>
+      <div class="card">
+        <h3>Tteumjip</h3>
+        <p>A cozy cleaning and focus-timer companion: a fluffy friend that turns small chores and pomodoro sessions into a routine.</p>
+        <span class="tag">In development</span>
+      </div>
+      <div class="card">
+        <h3>Hanco Note</h3>
+        <p>A knitting project notebook with row counters, notes and backups, shaped by an analysis of thousands of competitor app reviews.</p>
+        <span class="tag">In testing</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>How we build: Review-to-Release</h2>
+    <ol class="steps">
+      <li><div><b>Collect</b><span>Gather real user reviews of competing apps in the category.</span></div></li>
+      <li><div><b>Classify</b><span>Sort complaints and requests into concrete, fixable problems.</span></div></li>
+      <li><div><b>Specify</b><span>Turn the top problems into a feature spec and acceptance checks.</span></div></li>
+      <li><div><b>Build with Claude</b><span>Implement the changes by vibe coding with Claude as the main coding agent.</span></div></li>
+      <li><div><b>Verify</b><span>Run automated checks and device tests before anything ships.</span></div></li>
+    </ol>
+    <p class="note">We first ran this pipeline on Hanco Note, reviewing 3,739 competitor app reviews end to end. Next, we're moving it onto the Claude API so it can run for every product.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Say hello at <a href="mailto:hello@bamsaestudio.com">hello@bamsaestudio.com</a>.</p>
+  </section>
+
+  <footer>
+    <div>© 2026 Bamsae Studio (밤새 스튜디오)</div>
+    <div>Gimpo, Republic of Korea</div>
+  </footer>
+</div>
+</body>
+</html>
